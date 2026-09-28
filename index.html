@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Novo Social | Nutrição acessível com Lua Leite</title>
+<meta name="description" content="Consultas nutricionais individualizadas por R$ 60 para quem está passando por um momento financeiro difícil. Inscrição gratuita.">
+<meta name="theme-color" content="#F1EBE3">
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F1EBE3}
+.ns *{box-sizing:border-box}
+.ns{--page:#F1EBE3;--card:#FAF6F0;--soft:#ECE4DA;--ink:#2E2520;--text:#3B2F28;--muted:#76675C;--terra:#9A5B36;--terra2:#B07A58;--sage:#8A9E7F;--line:#E4DACE;
+background:var(--page);color:var(--text);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased;padding:12px 0 0}
+.ns p{margin:0}
+.ns a{text-decoration:none}
+.ns .st{width:14px;height:14px;fill:var(--terra);flex-shrink:0}
+.ns .ar{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ns .ck{width:20px;height:20px;fill:none;stroke:var(--terra);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:3px}
+.ns .wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+.ns .hdr{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 8px 8px 20px;background:rgba(250,246,240,.9);border:1px solid var(--line);border-radius:999px;box-shadow:0 8px 28px rgba(59,47,40,.06)}
+.ns .logo{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:500;letter-spacing:-.03em;color:var(--ink)}
+.ns .logo .st{width:16px;height:16px}
+.ns .logo em{font-style:normal;color:var(--terra)}
+.ns .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;background:var(--ink);color:#FAF6F0;font-size:16px;font-weight:600;white-space:nowrap;border-radius:999px;box-shadow:0 10px 24px rgba(46,37,32,.18)}
+.ns .btn:hover{background:#4A3B32}
+.ns .btn.sm{min-height:44px;padding:0 18px;font-size:14px;box-shadow:none}
+.ns .btn.lg{min-height:60px;padding:0 32px;font-size:17px}
+.ns .sec{padding:64px 0}
+.ns .box{background:var(--card);border-radius:36px;padding:36px 22px}
+.ns .eyebrow{display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;color:var(--muted);margin-bottom:18px}
+.ns .eyebrow.left{justify-content:flex-start}
+.ns h1,.ns h2,.ns h3{font-family:'DM Sans',sans-serif;font-weight:600;letter-spacing:-.045em;line-height:1.02;margin:0;color:var(--ink)}
+.ns h1{font-size:44px}
+.ns h2{font-size:38px}
+.ns h3{font-size:24px;letter-spacing:-.03em;line-height:1.15}
+.ns .acc{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;color:var(--terra);letter-spacing:-.01em;font-size:1.1em}
+.ns .lead{font-size:17px;line-height:1.65;color:var(--muted)}
+.ns .center{text-align:center}
+.ns .center .lead{max-width:760px;margin:18px auto 0}
+.ns .grid{display:grid;gap:16px;grid-template-columns:1fr}
+.ns .tile{width:64px;height:64px;border-radius:18px;background:var(--ink);display:flex;align-items:center;justify-content:center}
+.ns .tile .st{width:26px;height:26px;fill:#FAF6F0}
+.ns .hero{display:grid;gap:40px;grid-template-columns:1fr;align-items:center}
+.ns .hero .txt{display:flex;flex-direction:column;gap:22px;align-items:flex-start}
+.ns .cap{font-size:15px;color:var(--muted)}
+.ns .note{font-size:14px;color:var(--muted)}
+.ns .ticket{justify-self:center;width:230px;height:290px;border:9px solid var(--ink);border-radius:44px;background:#FBF8F3;transform:rotate(8deg);box-shadow:0 40px 60px -20px rgba(46,37,32,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;position:relative}
+.ns .ticket:before{content:"";position:absolute;top:14px;left:50%;width:90px;height:20px;margin-left:-45px;background:var(--ink);border-radius:0 0 14px 14px}
+.ns .ticket .t1{display:flex;align-items:center;gap:6px;font-size:18px;font-weight:500;letter-spacing:-.03em;color:var(--ink)}
+.ns .ticket .t1 em{font-style:normal;color:var(--terra)}
+.ns .ticket .t2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:64px;line-height:1;color:var(--terra);margin-top:10px}
+.ns .ticket .t3{font-size:14px;color:var(--muted)}
+.ns .marq{background:var(--card);border-radius:28px;overflow:hidden;padding:22px 0}
+.ns .track{display:flex;align-items:center;gap:28px;width:max-content;animation:nsScroll 32s linear infinite}
+.ns .track span{font-size:40px;font-weight:600;letter-spacing:-.04em;color:#B9AA9D;white-space:nowrap}
+.ns .track span.i{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#AE9E91}
+.ns .track i{width:10px;height:10px;border-radius:99px;background:#D9BCA7;flex-shrink:0}
+@keyframes nsScroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ns .track{animation:none}}
+.ns .card{background:var(--card);border-radius:28px;padding:30px 28px;display:flex;flex-direction:column;gap:12px}
+.ns .card b{font-size:18px;font-weight:600;color:var(--ink)}
+.ns .card p{font-size:16px;line-height:1.65;color:var(--muted)}
+.ns .feat{align-items:center;text-align:center;padding:40px 28px;gap:16px}
+.ns .feat svg.ic{width:40px;height:40px;fill:var(--ink)}
+.ns .steps{display:grid;grid-template-columns:1fr;gap:3px;background:var(--page);border-radius:32px;overflow:hidden}
+.ns .step{background:var(--card);padding:32px 26px;display:grid;grid-template-columns:64px 1fr;column-gap:16px;row-gap:12px}
+.ns .step .n{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:52px;line-height:.9;color:var(--terra)}
+.ns .step h3{align-self:center}
+.ns .step p{grid-column:2;display:flex;gap:10px;font-size:16px;line-height:1.6;color:var(--muted)}
+.ns .step p:before{content:"\203A";color:var(--terra);font-weight:600}
+.ns .about{display:grid;gap:36px;grid-template-columns:1fr;align-items:start}
+.ns .about img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;display:block}
+.ns .about .txt{display:flex;flex-direction:column;gap:16px}
+.ns .about .txt p{font-size:17px;line-height:1.7;color:var(--muted)}
+.ns .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.ns .stat{background:var(--page);border-radius:22px;padding:20px 22px}
+.ns .stat div{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:44px;line-height:1;color:var(--terra)}
+.ns .stat span{font-size:14px;color:var(--muted)}
+.ns .offer{max-width:760px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px;padding:48px 24px}
+.ns .badge{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#FAF6F0;border-radius:999px;padding:10px 20px;font-size:15px;letter-spacing:.02em}
+.ns .badge i{width:8px;height:8px;border-radius:99px;background:var(--sage)}
+.ns .word{font-size:52px;letter-spacing:-.03em;line-height:1;color:var(--ink);font-weight:300}
+.ns .word b{font-weight:700;color:var(--terra2)}
+.ns .price{display:flex;align-items:baseline;justify-content:center;gap:10px}
+.ns .price strong{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:64px;line-height:1;color:var(--terra)}
+.ns .price span{font-size:16px;color:var(--muted)}
+.ns .checks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;text-align:left}
+.ns .checks li{display:flex;gap:14px;font-size:17px;line-height:1.5;color:var(--text)}
+.ns .pill{display:inline-flex;background:var(--ink);color:#FAF6F0;border-radius:999px;padding:10px 20px;font-size:15px;margin-bottom:18px}
+.ns .faq{display:flex;flex-direction:column;gap:14px;margin-top:32px}
+.ns details{background:var(--soft);border-radius:24px;padding:0 22px}
+.ns summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:76px;cursor:pointer;font-size:18px;font-weight:500;color:var(--ink)}
+.ns summary::-webkit-details-marker{display:none}
+.ns .pm{width:44px;height:44px;border-radius:12px;background:var(--ink);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.ns .pm svg{width:18px;height:18px;fill:none;stroke:#FAF6F0;stroke-width:2.4;stroke-linecap:round}
+.ns .pm .v{transition:opacity .2s}
+.ns details[open] .pm .v{opacity:0}
+.ns details p{padding:0 0 24px;font-size:16px;line-height:1.6;color:var(--muted)}
+.ns .final{display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;padding:80px 0 72px}
+.ns .foot{border-top:1px solid var(--line);padding:28px 16px;text-align:center;font-size:14px;color:var(--muted)}
+@media (min-width:760px){
+.ns{padding-top:20px}
+.ns .wrap{padding:0 32px}
+.ns .sec{padding:96px 0}
+.ns .box{padding:64px}
+.ns h1{font-size:72px}
+.ns h2{font-size:58px}
+.ns .hero{grid-template-columns:1.25fr 1fr}
+.ns .ticket{width:320px;height:420px}
+.ns .ticket .t2{font-size:84px}
+.ns .g2{grid-template-columns:1fr 1fr;gap:24px}
+.ns .g3{grid-template-columns:repeat(3,1fr);gap:24px}
+.ns .steps{grid-template-columns:1fr 1fr}
+.ns .step{padding:40px 44px}
+.ns .about{grid-template-columns:5fr 7fr;gap:56px}
+.ns .offer{padding:64px}
+.ns .word{font-size:72px}
+.ns details{padding:0 32px}
+.ns summary{font-size:20px;min-height:88px}
+.ns .track span{font-size:52px}
+}
+</style>
+<div class="ns">
+<div class="wrap"><header class="hdr">
+<div class="logo"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg><span><em>Lua</em> Leite</span></div>
+<a class="btn sm" href="https://docs.google.com/forms/d/e/1FAIpQLScTX13pJKYAaQDnaE7j_YaMzPlzFatbjzGjda4OCWhElg_i_w/viewform" target="_blank">Quero me inscrever</a>
+</header></div>
+<section class="sec" style="padding-top:40px"><div class="wrap"><div class="box hero">
+<div class="txt">
+<div class="tile"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg></div>
+<div class="cap">Novo Social · nutrição acessível</div>
+<h1>Cuidar da sua alimentação não deveria ser um <span class="acc">privilégio.</span></h1>
+<p class="lead">Consultas nutricionais individualizadas por <strong style="color:#2E2520">R$ 60</strong>, para quem está passando por um momento financeiro difícil e não consegue pagar uma consulta particular.</p>
+<a class="btn lg" href="https://docs.google.com/forms/d/e/1FAIpQLScTX13pJKYAaQDnaE7j_YaMzPlzFatbjzGjda4OCWhElg_i_w/viewform" target="_blank">Quero fazer minha inscrição <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<p class="note">A inscrição é gratuita e não gera nenhuma cobrança.</p>
+</div>
+<div class="ticket" aria-hidden="true"><div class="t1"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg><span><em>Novo</em> Social</span></div><div class="t2">R$ 60</div><div class="t3">por consulta · valor social</div></div>
+</div></div></section>
+<div class="wrap"><div class="marq" aria-hidden="true"><div class="track"><span class="">cuidado</span><i></i><span class="i">acolhimento</span><i></i><span class="">rotina</span><i></i><span class="i">leveza</span><i></i><span class="">saúde</span><i></i><span class="i">autonomia</span><i></i><span class="">cuidado</span><i></i><span class="i">acolhimento</span><i></i><span class="">rotina</span><i></i><span class="i">leveza</span><i></i><span class="">saúde</span><i></i><span class="i">autonomia</span><i></i></div></div></div>
+<section class="sec"><div class="wrap">
+<div class="center"><div class="eyebrow"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg><span>Por que o Novo Social existe</span><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg></div>
+<h2>Porque orientação nutricional de verdade faz diferença na vida de <span class="acc">qualquer pessoa.</span></h2></div>
+<div class="grid g2" style="margin-top:48px;max-width:1000px;margin-left:auto;margin-right:auto">
+<div class="card"><b>O que eu vejo no consultório</b><p>Em mais de 9 anos de consultório, vi de perto o quanto uma alimentação bem orientada transforma a saúde, a energia e a relação com a comida. E também vi muita gente ficar de fora por não caber no orçamento.</p></div>
+<div class="card"><b>A porta que se abre</b><p>O Novo Social nasceu para abrir essa porta: o mesmo cuidado, com um valor social.</p></div>
+</div>
+</div></section>
+<section class="sec" style="padding-top:0"><div class="wrap">
+<div class="center"><div class="eyebrow"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg><span>O que você recebe</span><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg></div>
+<h2>Um atendimento pensado para a sua <span class="acc">realidade.</span></h2></div>
+<div class="grid g3" style="margin-top:48px">
+<div class="card feat"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4.5"/><path d="M3 21.5c0-5 4-7.5 9-7.5s9 2.5 9 7.5z"/></svg><h3>Consulta individualizada</h3><p>Olhar para a sua história, sua rotina e o que você tem em casa.</p></div>
+<div class="card feat"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.3S2.5 15.6 2.5 8.9A5 5 0 0 1 12 6.2a5 5 0 0 1 9.5 2.7c0 6.7-9.5 12.4-9.5 12.4z"/></svg><h3>Acompanhamento personalizado</h3><p>Orientações que cabem no seu dia a dia e no seu bolso.</p></div>
+<div class="card feat"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h6a1 1 0 0 1 1 1v1h2.5A1.5 1.5 0 0 1 20 5.5v15a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5v-15A1.5 1.5 0 0 1 5.5 4H8V3a1 1 0 0 1 1-1z"/></svg><h3>Sem exigência de exames</h3><p>Não precisa ter exames recentes nem diagnóstico para se inscrever.</p></div>
+</div>
+</div></section>
+<section class="sec" style="padding-top:0"><div class="wrap">
+<div class="center"><div class="eyebrow"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg><span>Como funciona</span><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg></div>
+<h2>Quatro passos <span class="acc">simples.</span></h2></div>
+<div class="steps" style="margin-top:48px">
+<div class="step"><div class="n">01</div><h3>Preencha a triagem</h3><p>Um formulário com perguntas sobre sua situação e sua saúde. Leva alguns minutos.</p></div>
+<div class="step"><div class="n">02</div><h3>Eu analiso com carinho</h3><p>Leio cada inscrição pessoalmente para organizar as vagas.</p></div>
+<div class="step"><div class="n">03</div><h3>Te chamo no WhatsApp</h3><p>Se selecionada, entro em contato para confirmar sua vaga e enviar o Pix da consulta.</p></div>
+<div class="step"><div class="n">04</div><h3>Você escolhe o horário</h3><p>Envio o link de agendamento para você marcar o dia e horário que cabem na sua rotina.</p></div>
+</div>
+<div class="center" style="margin-top:40px"><a class="btn lg" href="https://docs.google.com/forms/d/e/1FAIpQLScTX13pJKYAaQDnaE7j_YaMzPlzFatbjzGjda4OCWhElg_i_w/viewform" target="_blank">Começar pela triagem <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="box about">
+<img src="lua-foto.jpg" alt="Marlua Leite Palheta, nutricionista">
+<div class="txt">
+<div class="eyebrow left"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg><span>Quem vai te atender</span><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg></div>
+<h2>Oi, eu sou a <span class="acc">Lua.</span></h2>
+<p>Sou Marlua Leite Palheta, nutricionista (CRN-1 16507), com experiência em diferentes áreas da nutrição clínica ao longo da minha trajetória profissional.</p>
+<p>Atuo com nutrição clínica, comportamento alimentar (pós-graduada), emagrecimento, saúde da mulher, nutrição esportiva e acompanhamento de atletas, além de possuir experiência no atendimento de idosos, com estratégias voltadas à preservação de massa muscular, autonomia, saúde e qualidade de vida.</p>
+<p>Atualmente, venho direcionando minha especialização para a nutrição de pessoas neurodivergentes, especialmente mulheres com TDAH, TEA e altas habilidades/superdotação (pós-graduanda), considerando aspectos como rotina, organização, seletividade alimentar, dificuldades de planejamento, comportamento alimentar e relação com a comida.</p>
+<p>Meu trabalho é baseado em uma abordagem individualizada e prática: antes de pensar apenas no que comer, busco entender quem é o paciente, como funciona sua rotina, quais são suas dificuldades e quais estratégias realmente cabem na sua vida.</p>
+<p>Ao longo da minha trajetória, já acompanhei mais de 1.000 pacientes, sempre buscando unir conhecimento técnico, acolhimento e estratégias aplicáveis à vida real.</p>
+<div class="stats"><div class="stat"><div>9+</div><span>anos de experiência</span></div><div class="stat"><div>1.000+</div><span>pacientes atendidos</span></div></div>
+</div>
+</div></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="box offer">
+<div class="badge"><i></i>Valor social</div>
+<div class="word"><b>NOVO</b> SOCIAL</div>
+<div class="price"><strong>R$ 60</strong><span>por consulta</span></div>
+<ul class="checks">
+<li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Consulta nutricional individualizada</span></li>
+<li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Acompanhamento personalizado para a sua rotina</span></li>
+<li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Sem exigência de exames recentes ou diagnóstico</span></li>
+<li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Inscrição gratuita, sem nenhuma cobrança</span></li>
+</ul>
+<a class="btn lg" href="https://docs.google.com/forms/d/e/1FAIpQLScTX13pJKYAaQDnaE7j_YaMzPlzFatbjzGjda4OCWhElg_i_w/viewform" target="_blank">Quero fazer minha inscrição <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div></div></section>
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="box" style="max-width:1000px;margin:0 auto">
+<div class="pill">Dúvidas frequentes</div>
+<h2>Ficou alguma <span class="acc">dúvida?</span></h2>
+<div class="faq">
+<details open><summary>Vou pagar algo ao me inscrever?<span class="pm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="v" d="M12 5v14"/></svg></span></summary><p>Não. A inscrição é gratuita e o pagamento só acontece se você for selecionada.</p></details>
+<details><summary>Preciso ter exames recentes?<span class="pm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="v" d="M12 5v14"/></svg></span></summary><p>Não. Você pode se inscrever mesmo sem exames ou diagnóstico.</p></details>
+<details><summary>A inscrição garante a vaga?<span class="pm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="v" d="M12 5v14"/></svg></span></summary><p>As vagas são limitadas e cada inscrição passa por análise. Quem for selecionada recebe o contato pelo WhatsApp.</p></details>
+</div>
+</div></div></section>
+<div class="wrap final">
+<div class="eyebrow"><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg><span>Seu próximo passo</span><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1c.6 5.6 4.4 9.4 11 11-6.6 1.6-10.4 5.4-11 11-.6-5.6-4.4-9.4-11-11 6.6-1.6 10.4-5.4 11-11z"/></svg></div>
+<h2>Seu cuidado começa com um <span class="acc">formulário.</span></h2>
+<p class="lead">Preencha a triagem com calma. Eu leio cada resposta.</p>
+<a class="btn lg" href="https://docs.google.com/forms/d/e/1FAIpQLScTX13pJKYAaQDnaE7j_YaMzPlzFatbjzGjda4OCWhElg_i_w/viewform" target="_blank">Fazer minha inscrição <svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+<div class="foot">Marlua Leite Palheta · Nutricionista · CRN/DF 16507 · @lualeiteoficial</div>
+</div>
+</body>
+</html>
